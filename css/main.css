@@ -18,18 +18,40 @@ height: 43px;
 line-height: 43px;
 }
 .navbar>.container .navbar-brand{
- margin-left: -50px;
+ margin-left: -80px;
+}
+.navbar-form .form-control {
+display: inline-block;
+width: auto;
+vertical-align: middle;
+}
+.navbar-nav > li > a {
+padding-top: 26.5px;
+padding-bottom: 26.5px;
+padding-left: 26.5px;
+color: #434343;
+font-size: 1.2em;
+font-weight: 900px;
 }
 .form-control {
 color: #333;
 padding: 6px 12px;
-font-size: 14px;
+font-size: 18px;
 background-color: #fff;
 background-image: none;
 border: 1px solid #ccc;
 border-radius: 4px;
 box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.form.dropdown.open ul.dropdown-menu {
+min-width: 250px;
+padding: 15px;
+}
+.btn-success {
+color: #fff;
+background-color: #5cb85c;
+border-color: #4cae4c;
 }
 option{
 display: block;
@@ -43,7 +65,7 @@ background-size: cover;
 height: 80%;
 }
 .intro-text{
-margin-top: 120px
+margin-top: 150px
 }
 .intro-text .intro-heading {
 margin-bottom: 5px;

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>HOMEVIL</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/full-slider.css" rel="stylesheet">
+    <!-- Custom CSS -->
+	<link href="css/tellabout.css" rel="stylesheet">
+	
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+	<script type='text/javascript'>
+		
+		function visibility(){
+			var image = document.getElementById("img-laundry");
+			var image2 = document.getElementById("img-laundry-selected");
+			if(image.style.display == "block"){
+				image.style.display = 'none';
+				image2.style.display = 'block';
+				document.getElementById("laundry-tooltip").style.color = "#00b27e";
+				document.getElementsByClassName("radio-box selected").style.border = "2px solid #00b27e";
+			}else{
+				image.style.display = 'block';
+				image2.style.display = 'none';
+				document.getElementById("laundry-tooltip").style.color = "#6f6f6f";
+				document.getElementsByClassName("radio-box selected").style.border = "2px solid #ccc";
+			}
+		}
+		function showContactDetails(){
+			document.getElementById("contact_details").style.display = 'block';
+			document.getElementById("about_home").style.display = 'none';
+		}
+	</script>
+</head>
+
+<body id="page-top" class="index">
+
+
+<div class="container container-bf" id="your-place">
+	<div class="row clearfix" id="page_section">
+		<div class="col-xs-8" id="main_body_Section">
+			<header>
+			<div class="row">
+				<div class="col-xs-4">
+					<a href="/" style="padding-top:15px; padding-left:0px;"><img src="img/logo/house_logo2.png" alt="">
+					<span style="font-size: 24px; color: #FF6600;">HOME<strong style="color: #00C957;">VIL</strong></span></a>
+				</div>
+				<div class="col-xs-8">
+					<div class="progress-bar-section">
+						<hr>
+						<ul class="list-inline">
+							<li id="info-pane-person-icon" data-step="1" class="progress-bars step-1 active access-approved">
+								<span></span>
+								<p>Your</p>
+								<p>Place</p>
+							</li>
+							<li id="contact-pane-icon" data-step="2" class="progress-bars step-2">
+								<span></span>
+								<p>Contact</p>
+								<p>Info</p>
+							</li>
+							<li id="availability-pane-icon" data-step="3" class="progress-bars step-3">
+								<span></span>
+								<p>Date</p>
+								<p>&amp; Time</p>
+							</li>
+							<li id="payment-pane-icon" data-step="4" class="progress-bars step-4">
+								<span></span>
+								<p>Payment</p>
+								<p>Info</p>
+							</li>
+							<li id="review-order-pane-icon" data-step="5" class="progress-bars step-5">
+								<span></span>
+								<p>Review</p>
+								<p>Order</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			</header>
+			<section class="form-body" id="about_home">
+				<div class="form-pane" id="info-pane-person" >
+					<section class="header-section">
+						<h1>Tell us about your home!</h1>
+					</section>
+				
+				<section class="form-info">
+					<form id="home-size-form" class="form-horizontal" role="form">
+						<div class="form-group">
+							<label for="bedrooms" class="col-xs-2 control-label">Rooms</label>
+							<div class="col-xs-5 select">
+								<select name="" id="bedrooms" class="form-control input-lg">
+									<option value="0">0 Bedroom</option>
+									<option value="1" selected="selected">1 Bedroom</option>
+									<option value="2">2 Bedroom</option>
+									<option value="3">3 Bedroom</option>
+									<option value="4">4 Bedroom</option>
+									<option value="5">5+ Bedroom</option>
+								</select>
+								<i></i>
+							</div>
+							<div class="col-xs-5 select">
+								<select name="" id="bathrooms" class="form-control input-lg">
+									<option value="1">1 Bathroom</option>
+									<option value="2">2 Bathroom</option>
+									<option value="3">3 Bathroom</option>
+									<option value="4">4 Bathroom</option>
+									<option value="5">5+ Bathroom</option>
+								</select>
+								<i></i>
+							</div>
+						</div>
+					</form>
+				</section>
+				<hr>
+				<section class="extras">
+					<div class="control-group">
+						<label class="control-label text-left"><a id="#question" rel="popover" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Tasks require added attention to detail and will increase the total time estimate." title="" data-original-title="About Tasks">Add extra tasks to your cleaning (adds extra time)</a>
+						</label>
+					</div>
+
+					<div class="extras-container">
+					  <label class="radio-inline radio-box">
+						
+						<div onclick="visibility();" id="laundry-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="+1 hour">
+							<div>Laundry<br>Wash+Dry</div>
+							<img class="not_selected" src="img/logo/laundry.jpg" id="img-laundry">
+							<i class="fa fa-check icon-selected" id="img-laundry-selected" style="display:none;"></i>
+							<input type="checkbox" name="extras" id="extras-choice-1" value="laundry" label="Laundry" class="hidden input-extras">
+						</div>
+						
+					  </label>
+					  <label class="radio-inline radio-box">
+						<div id="fridge-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="+1 hour">
+							<div>Inside<br>Fridge</div>
+							<img class="not_selected" src="img/logo/fridge.png" id="img-fridge">
+							<i class="fa fa-check icon-selected" id="img-fridge-selected" style="display:none;"></i> 
+							<input type="checkbox" name="extras" id="extras-choice-4" value="fridge" label="Fridge" class="hidden input-extras">
+						</div>
+					  </label>
+					  <label class="radio-inline radio-box">
+						<div id="oven-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="+1 hour">
+							<div>Inside<br>Oven</div>
+							<img class="not_selected" src="img/logo/oven.jpg" id="img-oven">
+							<i class="fa fa-check icon-selected" id="img-oven-selected" style="display:none;"></i>
+							<input type="checkbox" name="extras" id="extras-choice-5" value="oven" label="Oven" class="hidden input-extras">
+						</div>
+					  </label>
+					  <label class="radio-inline radio-box">
+						<div id="cabinets-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="+1 hour">
+							<div>Inside<br>Cabinets</div>
+							<img class="not_selected" src="img/logo/cabinet.jpg" id="img-cabinets">
+							<i class="fa fa-check icon-selected" id="img-cabinets-selected" style="display:none;"></i>
+							<input type="checkbox" name="extras" id="extras-choice-6" value="cabinets" label="Cabinets" class="hidden input-extras">
+						</div>
+					  </label>
+					  <label class="radio-inline radio-box">
+						<div id="windows-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="+1 hour">
+							<div>Interior<br>Windows</div>
+							<img class="not_selected" src="img/logo/window.jpg" id="img-windows">
+							<i class="fa fa-check icon-selected" id="img-windows-selected" style="display:none;"></i>
+							<input type="checkbox" name="extras" id="extras-choice-2" value="windows" label="Windows" class="hidden input-extras">
+						</div>
+
+					  </label>
+					  
+					  <label class="radio-inline radio-box">
+						<div id="walls-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="+1 hour">
+							<div data-original-title="" title="">Interior<br>Walls</div>
+							<img class="not_selected" src="img/logo/wall.jpg" id="img-walls">
+							<i class="fa fa-check icon-selected" id="img-walls-selected" style="display:none;"></i>
+							<input type="checkbox" name="extras" id="extras-choice-3" value="walls" label="Walls" class="hidden input-extras">
+						</div>
+					  </label>
+					</div>
+				</section>
+				<hr>
+				<section class="selectHours">
+					<h3>Number of hours to book</h3>
+					<div class="row">
+						<div class="col-xs-8">
+						<p>
+							We recommend <strong><span class="output-duration">3</span></strong> hours based on our experience with places like yours<span id="options-details"></span>.
+						</p>
+						</div>
+						<div class="col-xs-4 select">
+						<select id="num_hours_dropdown_front" name="num_hours" class="form-control input-lg num_hours_dropdown">
+							<option value="2.5">2.5</option>
+							<option value="3">3.0</option>
+							<option value="3.5">3.5</option>
+							<option value="4">4.0</option>
+							<option value="4.5">4.5</option>
+							<option value="5">5.0</option>
+							<option value="5.5">5.5</option>
+							<option value="6">6.0</option>
+							<option value="6.5">6.5</option>
+							<option value="7">7.0</option>
+							<option value="7.5">7.5</option>
+							<option value="8">8.0</option>
+							<option value="8.5">8.5</option>
+							<option value="9">9.0</option>
+							<option value="9.5">9.5</option>
+							<option value="10">10.0</option>
+							<option value="10.5">10.5</option>
+							<option value="11">11.0</option>
+							<option value="11.5">11.5</option>
+							<option value="12">12.0</option>
+							<option value="12.5">12.5</option>
+							<option value="13">13.0</option>
+							<option value="13.5">13.5</option>
+							<option value="14">14.0</option>
+							<option value="14.5">14.5</option>
+							<option value="15">15.0</option>
+							<option value="15.5">15.5</option>
+							<option value="16">16.0</option>
+						</select>
+						<p class="text-center text-muted" style="display:none;"><small>2.5 hour minimum</small></p>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="form-group customer-note-control" id="customer-note-control-front" style="display: none;">
+								<hr>
+								<p class="not-goldx ">
+									<label>Because you are booking less time than estimated, we may not be able to clean your entire home<span class="extras-details-needed"></span>.</label>
+								</p>
+								<p>
+									<label class="control-label">Please list the top three rooms and tasks you would like us to focus on.</label>
+								</p>
+								<div class="controls">
+									<textarea class="form-control notes" placeholder="e.g. 1. Kitchen, 2. 1st floor bathroom, 3. Living Room. etc." name="notes"></textarea>
+								</div>
+							</div>
+							<div class="form-group alert alert-success dhj-hours-change-alert hidden">
+								<p><strong>Just a heads up! </strong>You've exceeded your pre-purchased hours. </p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="cleaning-supplies">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<div class="col-xs-4">
+								<label>Cleaning Supplies</label>
+							</div>
+							<div class="col-xs-8 inline-group">
+								<label class="radio-inline radio-button" for="AddCleaningSupplies">
+									<input type="radio" value="false" id="AddCleaningSupplies" class="cleaning-supplies-radio" name="cleaning-supplies-radio" checked="checked">
+									<i></i> Cleaner will provide (<span class="supplies-fee-out">$5</span>)
+								</label>
+								<label class="radio-inline radio-button" for="NoCleaningSupplies">
+									<input type="radio" onclick="summonCleaningSuppliesModal();" value="true" id="NoCleaningSupplies" class="cleaning-supplies-radio" name="cleaning-supplies-radio">
+									<i></i> I will provide
+								</label>
+							</div>
+						</div>
+					</form>
+				</section>
+				<section class="pets">
+					 <div class="inline-group">
+						 <label class="col-xs-4 control-label" style="margin-left:-15px;">Do you have pets?</label>
+						 <div class="col-sm-8">
+							 <div>
+								 <label class="checkbox-inline selector show-input-section checkbox" for="cats">
+									 <input type="checkbox" id="cats" name="cats" value="0"><i></i>
+									 Cats
+								 </label>
+								 <label class="checkbox-inline selector show-input-section checkbox" for="dogs">
+									 <input type="checkbox" id="dogs" name="dogs" value="0"><i></i>
+									 Dogs
+								 </label>
+								 <label class="checkbox-inline selector show-input-section checkbox" for="pets">
+									 <input type="checkbox" id="pets" name="pets" value="0"><i></i>
+									 Other
+								 </label>
+							 </div>
+							 <div class="input-section" style="margin-top: 15px; display: none;">
+								 <input id="pet_notes" type="text" class="form-control" placeholder="Describe eg. Two Large Pitbulls">
+							 </div>
+						 </div>
+					 </div>
+				 </section>
+				 <section class="cleaning-supplies">
+					<form action="" class="form-horizontal">
+						<div class="form-group">
+							<label for="" class="col-xs-4">Is your home carpeted?</label>
+							<div class="col-xs-8 inline-group">
+								<label class="radio-inline radio-button" for="has-carpets"><input type="radio" value="false" id="has-carpets" class="cleaning-supplies-radio"><i></i> Yes </label>
+								<label class="radio-inline radio-button" for="no-carpets"><input type="radio" value="true" id="no-carpets" class="cleaning-supplies-radio"><i></i> No</label>
+							</div>
+						</div>
+						<input type="hidden" id="book_has_carpets" value="">
+					</form>
+				</section>
+				<hr>
+				<section class="next-step">
+					<button class="btn btn-block btn-primary btn-cta skipjs" onclick="showContactDetails();">Next<span class="caret right-caret"></span></button>
+					<a id="save_and_continue"></a>
+				</section>
+				</div>
+			</section>
+		
+	
+<!-- Contact-Info Pane starts -->
+			
+	<section class="form-body" id="contact_details" style="display: none;">
+		<div class="form-pane" id="contact-info">
+			<section class="header-section">
+				<h1>Enter Contact Info</h1>
+			</section>
+				
+			<!-- ADDRESS SECTION -->
+ 
+			<section class="address-section">
+				<form class="form-horizontal" role="form" id="address-form" target="submit-frame" method="POST">
+					<div class="form-group">
+						<label for="address_street1" class="control-label" style="padding-left:20px;">Cleaning Address</label>
+					</div>
+
+					<div class="form-group">
+						<div class="col-xs-12">
+							<input id="address_street1" name="address_street1" type="text" class="form-control input-lg" placeholder="Address Line 1" minlength="1" required="true">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-xs-12">
+							<input id="address_street2" name="address_street2" type="text" class="form-control input-lg" placeholder="Address Line 2">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-xs-6">
+							<input id="city" name="city" type="text" class="form-control input-lg" placeholder="City" minlength="3">
+						</div>
+
+						<div class="col-xs-2" style="padding-left:0px;">
+							<input id="state" name="state" type="text" class="form-control input-lg" placeholder="State" minlength="2" required="true">
+						</div>
+
+						<div class="col-xs-4" style="padding-left:0px;">
+							<input id="zipcode" name="zipcode" type="text" class="form-control input-lg" placeholder="Zipcode" minlength="1" required="true">
+						</div>
+					</div>
+					<input type="submit" value="submit" class="hidden"/>
+				</form>
+			</section>
+			<hr>
+
+<!-- CONTACT INFORMATION SECTION -->
+			<section class="contact-section">
+
+				<p class="text-center">This information will only be used to contact you about your cleaning</p>
+				<form id="contact_info" class="form-horizontal" role="form" target="submit-frame" method="POST">
+					<div class="form-group">
+						<label for="name-input" class="col-lg-2 control-label">Name</label>
+						<div class="col-lg-10"><input type="text" class="form-control input-lg" id="name" name="customer_name" placeholder="Full Name" required data-validation-required-message="Please enter your name."></div>
+					</div>
+					<div class="form-group">
+						<label for="email-input" class="col-lg-2 control-label">Email</label>
+						<div class="col-lg-10"><input type="email" class="form-control input-lg" id="email" name="customer_email" placeholder="Email Address" required data-validation-required-message="Please enter your email address."></div>
+					</div>
+					
+					<div class="form-group">
+						<label for="password-input" class="col-lg-2 control-label">Password</label>
+						<div class="col-xs-5"><input type="password" class="form-control input-lg" id="password" name="customer_password" placeholder="Create Password">
+						</div>
+						<div class="col-xs-5"><input type="password" class="form-control input-lg" id="confirm_password" name="customer_confirm_password" placeholder="Confirm Password">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="phone-input" class="col-lg-2 control-label">Phone</label>
+						<div class="col-lg-10">
+							<div class="input-group">
+								<span id="phone_country_code" class="input-group-addon"></span>
+								<input type="text" class="form-control input-lg" id="phone" name="customer_phone" placeholder="Phone Number" required data-validation-required-message="Please enter your phone number.">
+								<p class="help-block text-danger"></p>
+							</div>
+							<label for="customer_phone" class="error"></label>
+						</div>
+					</div>
+					<input type="submit" value="submit" class="hidden"/>
+					 <!--<div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-lg" style="background-color:#00688B;color:white;border:solid 1px white;">Send</button>
+                            </div>
+                        </div>-->
+				</form>
+			</section>
+
+<!-- NEXT STEP SECTION -->
+    <hr>
+    <section class="next-step">
+        <button id="submit" class="skipjs btn btn-block btn-primary btn-cta" onclick="contact_pane_complete();">Next<span class="caret right-caret"></span></button>
+    </section>
+</div>
+</section>
+</div>
+</div>
+
+
+ 
+<!-- jQuery Version 1.11.0 -->
+<script src="js/jquery-1.11.0.js"></script>
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/cbpAnimatedHeader.js"></script>
+
+<!-- Contact Form JavaScript -->
+<script src="js/jqBootstrapValidation.js"></script>
+<script src="js/contact_me.js"></script>
+</body>
+
+</html>
