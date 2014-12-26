@@ -4,6 +4,10 @@ font-size: 14px;
 line-height: 1.42857143;
 color: #333;
 }
+::selection {
+    color: #fff;
+    background: green;
+}
 header {
 padding: 25px;
 }
@@ -36,7 +40,7 @@ padding-right: 5px;
 padding-left: 5px;
 }
 header .progress-bar-section li.active span {
-background: #81BB47;
+background: #00C957;
 border: none;
 }
 .progress-bar-section span {
@@ -52,11 +56,12 @@ background: #fff;
 }
 .progress-bar-section li:last-child {
 margin-right: 0;
+margin-left: -3px;
 }
 header .progress-bar-section hr {
 margin: 0 auto;
 border-top: 1px dotted #ccc;
-width: 310px;
+width: 330px;
 position: absolute;
 top: 10px;
 left: 27px;
@@ -71,6 +76,7 @@ z-index: 1;
 border-radius: 100%;
 }
 header .progress-bar-section li p {
+font-size: 12px;
 margin: 0;
 }
 header .progress-bar-section li {
@@ -78,17 +84,20 @@ font-size: 10px;
 color: #888;
 text-align: center;
 }
+.list-inline{
+width:375px;
+}
 
 body .form-body {
 padding: 30px;
 background-color: #fbfbf9;
-border: 2px solid #dbdcd9;
+border: 2px solid #00C957;
 }
 .header-section {
 margin-top: 0 !important;
 margin-bottom: 40px;
 text-align: center;
-color: #6f6f6f;
+color: #00C957;
 font-weight: 300;
 }
 .header-section h1 {
@@ -153,6 +162,17 @@ text-decoration: none;
 .extras-container {
 text-align: center;
 }
+.extras .box-style {
+border: 2px solid #ccc;
+padding: 5px 5px;
+background: white;
+text-align: center;
+width: 80px;
+min-width: 65px;
+height: 111px;
+margin: 0 5px 0 0;
+display:inline-block;
+}
 select.input-lg {
 height: 46px;
 }
@@ -168,8 +188,8 @@ input#AddCleaningSupplies {
 border-radius: 0;
 border: 2px solid #dbdcd9;
 }
-.extras .radio-box:hover {
-border: 2px solid #00b27e;
+.extras .box-style:hover {
+border: 2px solid #00C957;
 opacity: 1;
 }
 .cleaning-supplies .form-group label {
@@ -180,23 +200,11 @@ text-align: left;
 margin-top: 0;
 margin-bottom: 0;
  }
-.radio-box.selected {
-color: #00b27e;
-}
-.extras .radio-box {
-border: 2px solid #ccc;
-padding: 5px 5px;
-background: white;
-text-align: center;
-width: 80px;
-min-width: 65px;
-min-height: 111px;
-margin: 0 5px 0 0;
-}
+
 .form-body label {
 color: #6f6f6f;
 }
-.extras .radio-box img.not_selected, .extras .radio-box img.hovered {
+.extras .box-style img.not_selected, .extras .box-style img.hovered {
 width: 50px;
 height: 50px;
 display: block;
@@ -230,7 +238,7 @@ content: '';
 opacity: 1;
 width: 10px;
 height: 6px;
-border: 3px solid #81BB47;
+border: 3px solid #00C957;
 border-top: none;
 border-right: none;
 top: 3px;
@@ -245,7 +253,7 @@ position: absolute;
 opacity: 0;
 }
 .radio-button:hover i,.checkbox:hover i, .checkbox input:checked + i{
-color: #81BB47;
+color: #00C957;
 }
 .inline-group .radio-inline,.inline-group .checkbox-inline{
 margin-left: 25px;
@@ -270,7 +278,7 @@ border-style: solid;
 background: #fff;
 }
 .radio-button input + i:after {
-background-color: #81BB47;
+background-color: #00C957;
 content: '';
 top: 4px;
 left: 4px;
@@ -279,7 +287,7 @@ height: 5px;
 border-radius: 50%;
 }
 .radio-button  input:checked + i {
-border-color: #81BB47;
+border-color: #00C957;
 }
 .next-step {
 margin-top: 30px;
@@ -291,7 +299,7 @@ color: #fff;
 border-color: #285e8e;
 }
 .btn-cta {
-background-color: #81BB47;
+background-color: #00C957;
 padding: 15px 25px;
 font-size: 23px;
 font-weight: 300;
@@ -305,17 +313,17 @@ border-left: 6px solid #fff;
 margin-left: 15px;
 }
 .btn-cta:hover {
-background: #81BB47;
+background: #00C957;
 }
 .icon-selected {
 display: block;
 margin: 13px auto;
 font-size: 30px;
-color: #00b27e;
+color: #00C957;
 }
 .radio-box .selected {
-color: #00b27e;
-border: 2px solid #00b27e;
+color: #00C957;
+border: 2px solid #00C957;
 }
 #main_body_section {
 margin-bottom: 25px;
@@ -330,4 +338,58 @@ padding: 10px 16px;
 .form-body input{
 border-radius: 0;
 border: 2px solid #dbdcd9;
+}
+.datetimepicker th.switch {
+width: 500px;
+}
+.datetimepicker {
+	background-color: #fff;
+	border: 2px solid #00C957;
+	border-radius: 4px;
+	box-shadow: 0 0 8px rgba(233, 137, 102, 0.6);
+	display: none;
+	padding: 10px;
+	width: 500px;
+}
+.datetimepicker tfoot{
+background-color: #00C957;
+color: #fff;
+}
+.text-primary {
+color: #00C957;
+}
+.popover{
+border: 2px solid #00C957;
+}
+ .popover.bottom.arrow {
+border-bottom-color: 2px solid rgba(0,255,0,0.25);
+}
+.popover-title{
+border-bottom: 2px solid #00C957;
+}
+.clockpicker-plate{
+border:1.5px solid #00C957;
+}
+
+.frequency-section div.btn-group-frequency .btn.active {
+background-color: #00C957;
+color: #fff;
+border: 1.5px solid #009900;
+}
+.frequency-section div.btn-group-frequency .btn:hover{
+background-color: #00C957;
+color: #fff;
+border: 1.5px solid #009900;
+}
+section.frequency-section div.btn-group-frequency .btn.active:hover{
+background-color: #00C957;
+color: #fff;
+border:1.5px solid #009900;
+}
+.hourly-price h2 {
+margin: -15px 0 2px 0;
+font-size: 14px;
+}
+.btn-default {
+border: 1.5px solid #00C957;
 }
