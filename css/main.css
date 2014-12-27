@@ -69,25 +69,29 @@ white-space: pre;
 min-height: 1.2em;
 }
 #price-quote{
-padding: 60px 0;
+padding: 50px 0;
 }
 #price-quote h1{
-font-size: 72px;
-line-height: 20px;
+font-size: 62px;
+line-height: 12px;
 font-family: 'GTWalsheimRegular';
-color: #00C957;
+color: ##34495e;
+text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 #price-quote h2{
-font-size: 62px;
-line-height: 20px;
+font-size: 45px;
+line-height: 10px;
 font-family: 'GTWalsheimRegular';
-color: #00C957;
+text-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+color: ##34495e;
 }
 #price-quote h3{
-font-size: 52px;
-line-height: 20px;
+font-size: 35px;
+line-height: 10px;
 font-family: 'GTWalsheimRegular';
-color: #00C957;
+text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+color: ##34495e;
+padding-bottom:20px;
 }
 .mainImg{
 background: url(../img/cleanhome/Home-Cleaning-Tips-01.jpg) no-repeat center center;
@@ -104,7 +108,7 @@ font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 font-size: 70px;
 font-weight: 900;
 line-height: 43px;
-text-shadow: #2e2e2e 3px 4px 5px;
+text-shadow: 1px 1px 4px #121212;
 color: #fff;
 opacity:0.92;
 }
@@ -113,9 +117,8 @@ margin-bottom: 50px;
 font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
 font-size: 30px;
 font-weight: 600;
-font-style: italic;
 line-height: 55px;
-text-shadow: #2e2e2e 1px 3px 4px;
+text-shadow: 1px 1px 1px rgba(0,0,0, 0.4);
 color: #fff;
 
 }
@@ -152,10 +155,10 @@ font-weight: normal;
 }
 .tile h3{
 margin-bottom: 20px;
-color: #34495e;
+color: #000;
 font-weight: bold;
 letter-spacing: -1px;
-font-size: 32px;
+font-size: 30px;
 line-height: 20px;
 text-align: center;
 }
@@ -185,15 +188,15 @@ margin: 0 auto;
 margin-top: -1px;
 }
 .book-clean-happy-heading h2{
-font-size: 50px;
-padding-bottom: 40px;
-padding-top: 20px;
+font-size: 38px;
+padding-bottom: 30px;
+padding-top: 10px;
 margin-bottom: 0px;
 font-weight: 700;
 line-height: 20px;
 color: white;
 text-align: center;
-font-family:'GTWalsheimRegular';
+font-family:'TradeGothic', sans-serif;
 }
 .book-clean-happy-section{
 background-color: #fff;
@@ -207,7 +210,8 @@ margin-left: auto;
 margin-right: auto;
 }
 .book-clean-happy-section p{
-font-size:23px;
+font-size:20px;
+color: #34495e;
 }
 section.description-section {
 padding: 50px 0;
@@ -249,7 +253,7 @@ margin: 0 0 30px 0;
 color: #fff;
 font-size: 50px;
 line-height:50px;
-font-family:'GTWalsheimRegular';
+font-family:'TradeGothic', sans-serif;
 }
 .description .checkpoint{
 font-weight:500px;
@@ -297,7 +301,7 @@ margin-right: -30px;
 }
 section.trust-us-section {
 margin: 0 auto;
-background-color: #0099CC;
+background-color: #008B8B;
 color: #fff;
 padding: 80px 0;
 }
@@ -308,11 +312,14 @@ color: #fff;
 padding-top: 10px;
 font-size: 50px;
 line-height:50px;
-font-family:'GTWalsheimRegular';
+font-family:'TradeGothic', sans-serif;
 }
 section.trust-us-section p {
 width: 60%;
 margin: 0 auto;
 font-size: 23px;
 }
-
+#price-quote a:hover{
+background-color:#FF6600;
+color:#fff;
+}

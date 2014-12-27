@@ -1,3 +1,28 @@
+var total_hours;
+var extra_hours = 0;
+function addHours(){
+	var bedroom_hrs = document.getElementById('bedrooms').value;
+	var bathroom_hrs = document.getElementById('bathrooms').value;
+	if(extra_hours >= 0.5){
+		total_hours = parseFloat(bedroom_hrs) + parseFloat(bathroom_hrs) + extra_hours;
+	}else{
+		total_hours = parseFloat(bedroom_hrs) + parseFloat(bathroom_hrs);
+	}
+	document.getElementById("total_hours").innerHTML  = total_hours;
+	return total_hours;
+}
+function addExtraHours(){
+	var total_hours = addHours();
+	total_hours = total_hours + 0.5;
+	extra_hours = extra_hours + 0.5;
+	document.getElementById("total_hours").innerHTML  = total_hours;
+}
+function subtractHours(){
+	var new_hours = addHours();
+	total_hours = new_hours - 0.5;
+	extra_hours = extra_hours - 0.5;
+	document.getElementById("total_hours").innerHTML  = total_hours;
+}
 function laundryVisibility(){
 	var image = document.getElementById("img-laundry");
 	var image2 = document.getElementById("img-laundry-selected");
@@ -5,12 +30,13 @@ function laundryVisibility(){
 		image.style.display = 'none';
 		image2.style.display = 'block';
 		document.getElementById("laundry-tooltip").style.color = "#00b27e";
-		document.getElementsByClassName("box-style").style.border = "2px solid #00b27e";
+		/*document.getElementsByClassName("box-style").style.border = "2px solid #00b27e"; */
+		addExtraHours();
 	}else{
 		image.style.display = 'block';
 		image2.style.display = 'none';
 		document.getElementById("laundry-tooltip").style.color = "#6f6f6f";
-		document.getElementsByClassName("box-style").style.border = "2px solid #ccc";
+		subtractHours();
 	}
 }
 function fridgeVisibility(){
@@ -20,12 +46,12 @@ function fridgeVisibility(){
 		image.style.display = 'none';
 		image2.style.display = 'block';
 		document.getElementById("fridge-tooltip").style.color = "#00b27e";
-		document.getElementsByClassName("radio-box selected").style.border = "2px solid #00b27e";
+		addExtraHours();
 	}else{
 		image.style.display = 'block';
 		image2.style.display = 'none';
 		document.getElementById("fridge-tooltip").style.color = "#6f6f6f";
-		document.getElementsByClassName("radio-box selected").style.border = "2px solid #ccc";
+		subtractHours();
 	}
 }
 function ovenVisibility(){
@@ -35,12 +61,12 @@ function ovenVisibility(){
 		image.style.display = 'none';
 		image2.style.display = 'block';
 		document.getElementById("oven-tooltip").style.color = "#00b27e";
-		document.getElementsByClassName("radio-box selected").style.border = "2px solid #00b27e";
+		addExtraHours();
 	}else{
 		image.style.display = 'block';
 		image2.style.display = 'none';
 		document.getElementById("oven-tooltip").style.color = "#6f6f6f";
-		document.getElementsByClassName("radio-box selected").style.border = "2px solid #ccc";
+		subtractHours();
 	}
 }
 function cabinetsVisibility(){
@@ -50,12 +76,12 @@ function cabinetsVisibility(){
 		image.style.display = 'none';
 		image2.style.display = 'block';
 		document.getElementById("cabinets-tooltip").style.color = "#00b27e";
-		document.getElementsByClassName("radio-box selected").style.border = "2px solid #00b27e";
+		addExtraHours();
 	}else{
 		image.style.display = 'block';
 		image2.style.display = 'none';
 		document.getElementById("cabinets-tooltip").style.color = "#6f6f6f";
-		document.getElementsByClassName("radio-box selected").style.border = "2px solid #ccc";
+		subtractHours();
 	}
 }
 function wallsVisibility(){
@@ -65,12 +91,12 @@ function wallsVisibility(){
 		image.style.display = 'none';
 		image2.style.display = 'block';
 		document.getElementById("walls-tooltip").style.color = "#00b27e";
-		document.getElementsByClassName("radio-box selected").style.border = "2px solid #00b27e";
+		addExtraHours();
 	}else{
 		image.style.display = 'block';
 		image2.style.display = 'none';
 		document.getElementById("walls-tooltip").style.color = "#6f6f6f";
-		document.getElementsByClassName("radio-box selected").style.border = "2px solid #ccc";
+		subtractHours();
 	}
 }
 function windowsVisibility(){
@@ -80,12 +106,12 @@ function windowsVisibility(){
 		image.style.display = 'none';
 		image2.style.display = 'block';
 		document.getElementById("windows-tooltip").style.color = "#00b27e";
-		document.getElementsByClassName("radio-box selected").style.border = "2px solid #00b27e";
+		addExtraHours();
 	}else{
 		image.style.display = 'block';
 		image2.style.display = 'none';
 		document.getElementById("windows-tooltip").style.color = "#6f6f6f";
-		document.getElementsByClassName("radio-box selected").style.border = "2px solid #ccc";
+		subtractHours();
 	}
 }
 
@@ -99,11 +125,3 @@ function windowsVisibility(){
 			document.getElementById("about_home").style.display = 'none';
 			document.getElementById("calendar_section").style.display = 'block';
 		}
-function addHours(){
-var bedroom_hrs = document.getElementById('bedrooms').value;
-var bathroom_hrs = document.getElementById('bathrooms').value;
-alert("no. of bedroom hours: " + bedroom_hrs + "no. of bathroom hours: " + bathroom_hrs);
-var total_hours = parseFloat(bedroom_hrs) + parseFloat(bathroom_hrs);
-alert("total_hours: "+ total_hours);
-document.getElementById("total_hours").innerHTML  = total_hours;
-}
