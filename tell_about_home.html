@@ -3,528 +3,816 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
 
-    <title>HOMEVIL</title>
+<title>HOMEVIL</title>
 
-    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
-	<link href="css/clockpicker.css" rel="stylesheet" media="screen">
-	<link href="css/full-slider.css" rel="stylesheet">
-    <!-- Custom CSS -->
-	<link href="css/tellabout.css" rel="stylesheet">
+<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet"
+	media="screen">
+<link href="css/clockpicker.css" rel="stylesheet" media="screen">
+<link href="css/full-slider.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="css/tellabout.css" rel="stylesheet">
+
+
+<!-- Custom Fonts -->
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700"
+	rel="stylesheet" type="text/css">
+<link
+	href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+	rel="stylesheet" type="text/css">
+
+<script type='text/javascript'>
 	
-
-    <!-- Custom Fonts -->
-    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-	<script type='text/javascript'>
-		
-		
-	</script>
+</script>
 </head>
 
 <body id="page-top" class="index">
 
 
-<div class="container container-bf" id="your-place">
-	<div class="row clearfix" id="page_section">
-		<div class="col-xs-8" id="main_body_Section">
-			<header>
-			<div class="row">
-				<div class="col-xs-4">
-					<a href="/" style="padding-top:15px; padding-left:0px;"><img src="img/logo/house_logo2.png" alt="">
-					<span style="font-size: 24px; color: #FF6600;">HOME<strong style="color: #00C957;">VIL</strong></span></a>
-				</div>
-				<div class="col-xs-8">
-					<div class="progress-bar-section">
-						<hr>
-						<ul class="list-inline">
-							<li id="info-pane-person-icon" data-step="1" class="progress-bars step-1 active access-approved">
-								<span></span>
-								<p>Your</p>
-								<p>Place</p>
-							</li>
-							<li id="contact-pane-icon" data-step="2" class="progress-bars step-2">
-								<span></span>
-								<p>Contact</p>
-								<p>Info</p>
-							</li>
-							<li id="availability-pane-icon" data-step="3" class="progress-bars step-3">
-								<span></span>
-								<p>Date</p>
-								<p>&amp; Time</p>
-							</li>
-							<li id="payment-pane-icon" data-step="4" class="progress-bars step-4">
-								<span></span>
-								<p>Payment</p>
-								<p>Info</p>
-							</li>
-							<li id="review-order-pane-icon" data-step="5" class="progress-bars step-5">
-								<span></span>
-								<p>Review</p>
-								<p>Order</p>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			</header>
-			<section class="form-body" id="about_home">
-				<div class="form-pane" id="info-pane-person" >
-					<section class="header-section">
-						<h1>Tell us about your home!</h1>
-					</section>
-				
-				<section class="form-info">
-					<form id="home-size-form" class="form-horizontal" role="form">
-						<div class="form-group">
-							<label for="bedrooms" class="col-xs-2 control-label">Rooms</label>
-							<div class="col-xs-5 select">
-								<select name="" id="bedrooms" class="form-control input-lg" onchange="addHours();">
-									<option value="0">0 Bedroom</option>
-									<option value="0.5" selected="selected">1 Bedroom</option>
-									<option value="1">2 Bedroom</option>
-									<option value="1.5">3 Bedroom</option>
-									<option value="2">4 Bedroom</option>
-									<option value="2.5">5+ Bedroom</option>
-								</select>
-								<i></i>
-							</div>
-							<div class="col-xs-5 select">
-								<select name="" id="bathrooms" class="form-control input-lg" onchange="addHours();">
-									<option value="0.5">1 Bathroom</option>
-									<option value="1">2 Bathroom</option>
-									<option value="1.5">3 Bathroom</option>
-									<option value="2">4 Bathroom</option>
-									<option value="2.5">5+ Bathroom</option>
-								</select>
-								<i></i>
-							</div>
-						</div>
-					</form>
-				</section>
-				<hr>
-				<section class="extras">
-					<div class="control-group">
-						<label class="control-label text-left"><a id="#question" rel="popover" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Tasks require added attention to detail and will increase the total time estimate." title="" data-original-title="About Tasks">Add extra tasks to your cleaning (adds extra time)</a>
-						</label>
-					</div>
-
-					<div class="extras-container">
-					  <div class="box-style" onclick="laundryVisibility();">
-						<div id="laundry-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="+1 hour">
-							<div>Laundry<br>Wash+Dry</div>
-							<img class="not_selected" src="img/logo/laundry.jpg" id="img-laundry">
-							<i class="glyphicon glyphicon-ok icon-selected" id="img-laundry-selected" style="display:none;"></i>
-							<input type="text" name="extras" id="extras-choice-1" value="laundry" label="Laundry" class="hidden input-extras">
-						</div>
-					</div>
-					  <div class="box-style" onclick="fridgeVisibility();">
-						<div id="fridge-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="+1 hour">
-							<div>Inside<br>Fridge</div>
-							<img class="not_selected" src="img/logo/fridge.png" id="img-fridge">
-							<i class="glyphicon glyphicon-ok icon-selected" id="img-fridge-selected" style="display:none;"></i> 
-							<input type="text" name="extras" id="extras-choice-4" value="fridge" label="Fridge" class="hidden input-extras">
-						</div>
-					  </div>
-					  <div class="box-style" onclick="ovenVisibility();">
-						<div id="oven-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="+1 hour">
-							<div>Inside<br>Oven</div>
-							<img class="not_selected" src="img/logo/oven.jpg" id="img-oven">
-							<i class="glyphicon glyphicon-ok icon-selected" id="img-oven-selected" style="display:none;"></i>
-							<input type="text" name="extras" id="extras-choice-5" value="oven" label="Oven" class="hidden input-extras">
-						</div>
-					  </div>
-					  <div class="box-style" onclick="cabinetsVisibility();">
-						<div id="cabinets-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="+1 hour">
-							<div>Inside<br>Cabinets</div>
-							<img class="not_selected" src="img/logo/cabinet.jpg" id="img-cabinets">
-							<i class="glyphicon glyphicon-ok icon-selected" id="img-cabinets-selected" style="display:none;"></i>
-							<input type="text" name="extras" id="extras-choice-6" value="cabinets" label="Cabinets" class="hidden input-extras">
-						</div>
-					  </div>
-					  <div class="box-style" onclick="windowsVisibility();">
-						<div id="windows-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="+1 hour">
-							<div>Interior<br>Windows</div>
-							<img class="not_selected" src="img/logo/window.jpg" id="img-windows">
-							<i class="glyphicon glyphicon-ok icon-selected" id="img-windows-selected" style="display:none;"></i>
-							<input type="text" name="extras" id="extras-choice-2" value="windows" label="Windows" class="hidden input-extras">
-						</div>
-
-					  </div>
-					  
-					  <div class="box-style" onclick="wallsVisibility();">
-						<div id="walls-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="+1 hour">
-							<div data-original-title="" title="">Interior<br>Walls</div>
-							<img class="not_selected" src="img/logo/wall.jpg" id="img-walls">
-							<i class="glyphicon glyphicon-ok icon-selected" id="img-walls-selected" style="display:none;"></i>
-							<input type="text" name="extras" id="extras-choice-3" value="walls" label="Walls" class="hidden input-extras">
-						</div>
-					  </div>
-				</section>
-				<hr>
-				<section class="selectHours">
-					<h3>Number of hours to book</h3>
+	<div class="container container-bf" id="your-place">
+		<div class="row clearfix" id="page_section">
+			<div class="col-xs-8" id="main_body_Section">
+				<header>
 					<div class="row">
+						<div class="col-xs-4">
+							<a href="/" style="padding-top: 15px; padding-left: 0px;"><img
+								src="img/logo/house_logo2.png" alt=""> <span
+								style="font-size: 24px; color: #FF6600;">HOME<strong
+									style="color: #00C957;">VIL</strong></span></a>
+						</div>
 						<div class="col-xs-8">
-						<p>
-							We recommend <strong><span id="total_hours"></span></strong> hours based on our experience with places like yours<span id="options-details"></span>.
-						</p>
-						</div>
-						<div class="col-xs-4 select">
-						<select id="num_hours_dropdown_front" name="num_hours" class="form-control input-lg num_hours_dropdown">
-							<option value="2.5">2.5</option>
-							<option value="3">3.0</option>
-							<option value="3.5">3.5</option>
-							<option value="4">4.0</option>
-							<option value="4.5">4.5</option>
-							<option value="5">5.0</option>
-							<option value="5.5">5.5</option>
-							<option value="6">6.0</option>
-							<option value="6.5">6.5</option>
-							<option value="7">7.0</option>
-							<option value="7.5">7.5</option>
-							<option value="8">8.0</option>
-							<option value="8.5">8.5</option>
-							<option value="9">9.0</option>
-							<option value="9.5">9.5</option>
-							<option value="10">10.0</option>
-							<option value="10.5">10.5</option>
-							<option value="11">11.0</option>
-							<option value="11.5">11.5</option>
-							<option value="12">12.0</option>
-							<option value="12.5">12.5</option>
-							<option value="13">13.0</option>
-							<option value="13.5">13.5</option>
-							<option value="14">14.0</option>
-							<option value="14.5">14.5</option>
-							<option value="15">15.0</option>
-							<option value="15.5">15.5</option>
-							<option value="16">16.0</option>
-						</select>
-						<p class="text-center text-muted" style="display:none;"><small>2.5 hour minimum</small></p>
+							<div class="progress-bar-section">
+								<hr>
+								<ul class="list-inline">
+									<li id="info-pane-person-icon" data-target="#step1"
+										class="progress-bars step-1 active access-approved"><span class="active icon"></span>
+										<p>Your</p>
+										<p>Place</p></li>
+									<li id="availability-pane-icon" data-target="#step2"
+										class="progress-bars step-2"><span></span>
+										<p>Date</p>
+										<p>&amp; Time</p></li>
+									<li id="contact-pane-icon" data-target="#step3"
+										class="progress-bars step-3"><span></span>
+										<p>Contact</p>
+										<p>Info</p></li>
+									<li id="payment-pane-icon" data-target="#step4"
+										class="progress-bars step-4"><span></span>
+										<p>Payment</p>
+										<p>Info</p></li>
+									<li id="review-order-pane-icon" data-target="#step5"
+										class="progress-bars step-5"><span></span>
+										<p>Review</p>
+										<p>Order</p></li>
+								</ul>
+							</div>
 						</div>
 					</div>
+				</header>
+				<section class="form-body" id="about_home">
+					<div class="form-pane" id="info-pane-person">
+						<section class="header-section">
+							<h1>Tell us about your home!</h1>
+						</section>
+						<section class="error-section">
+							<h4 style="color:red;display:none;" id="error">Seems like you have not selected anything. Please select items to proceed further.</h4>
+						</section>
 
-					<div class="row">
-						<div class="col-xs-12">
-							<div class="form-group customer-note-control" id="customer-note-control-front" style="display: none;">
-								<hr>
-								<p class="not-goldx ">
-									<label>Because you are booking less time than estimated, we may not be able to clean your entire home<span class="extras-details-needed"></span>.</label>
-								</p>
-								<p>
-									<label class="control-label">Please list the top three rooms and tasks you would like us to focus on.</label>
-								</p>
-								<div class="controls">
-									<textarea class="form-control notes" placeholder="e.g. 1. Kitchen, 2. 1st floor bathroom, 3. Living Room. etc." name="notes"></textarea>
+						<section class="form-info">
+							<form id="home-size-form" class="form-horizontal" role="form" name="about_home">
+								<div class="form-group">
+									<label for="bedrooms" class="col-xs-2 control-label">Rooms</label>
+									<div class="col-xs-5 select">
+										<select name="" id="bedrooms" class="form-control input-lg"
+											onchange="addHours();">
+											<option value="0">0 Bedroom</option>
+											<option value="0.5" selected="selected">1 Bedroom</option>
+											<option value="1">2 Bedroom</option>
+											<option value="1.5">3 Bedroom</option>
+											<option value="2">4 Bedroom</option>
+											<option value="2.5">5+ Bedroom</option>
+										</select> <i></i>
+									</div>
+									<div class="col-xs-5 select">
+										<select name="" id="bathrooms" class="form-control input-lg"
+											onchange="addHours();">
+											<option value="0">0 Bathroom</option>
+											<option value="0.5" selected="selected">1 Bathroom</option>
+											<option value="1">2 Bathroom</option>
+											<option value="1.5">3 Bathroom</option>
+											<option value="2">4 Bathroom</option>
+											<option value="2.5">5+ Bathroom</option>
+										</select> <i></i>
+									</div>
+								</div>
+							</form>
+						</section>
+						<hr>
+						<section class="extras">
+							<div class="control-group">
+								<label class="control-label text-left"><a id="#question"
+									rel="popover" data-toggle="popover" data-trigger="hover"
+									data-placement="top"
+									data-content="Tasks require added attention to detail and will increase the total time estimate."
+									title="" data-original-title="About Tasks">Add extra tasks
+										to your cleaning (adds extra time)</a> </label>
+							</div>
+
+							<div class="extras-container">
+								<div class="box-style" onclick="laundryVisibility();">
+									<div id="laundry-tooltip" data-toggle="tooltip"
+										data-placement="top" title=""
+										data-original-title="+30 minutes">
+										<div>
+											Laundry<br>Wash+Dry
+										</div>
+										<img class="not_selected" src="img/logo/laundry.jpg"
+											id="img-laundry"> <i
+											class="glyphicon glyphicon-ok icon-selected"
+											id="img-laundry-selected" style="display: none;"></i> <input
+											type="text" name="extras" id="extras-choice-1"
+											value="laundry" label="Laundry" class="hidden input-extras">
+									</div>
+								</div>
+								<div class="box-style" onclick="fridgeVisibility();">
+									<div id="fridge-tooltip" data-toggle="tooltip"
+										data-placement="top" title=""
+										data-original-title="+30 minutes">
+										<div>
+											Inside<br>Fridge
+										</div>
+										<img class="not_selected" src="img/logo/fridge.png"
+											id="img-fridge"> <i
+											class="glyphicon glyphicon-ok icon-selected"
+											id="img-fridge-selected" style="display: none;"></i> <input
+											type="text" name="extras" id="extras-choice-4" value="fridge"
+											label="Fridge" class="hidden input-extras">
+									</div>
+								</div>
+								<div class="box-style" onclick="ovenVisibility();">
+									<div id="oven-tooltip" data-toggle="tooltip"
+										data-placement="top" title=""
+										data-original-title="+30 minutes">
+										<div>
+											Inside<br>Oven
+										</div>
+										<img class="not_selected" src="img/logo/oven.jpg"
+											id="img-oven"> <i
+											class="glyphicon glyphicon-ok icon-selected"
+											id="img-oven-selected" style="display: none;"></i> <input
+											type="text" name="extras" id="extras-choice-5" value="oven"
+											label="Oven" class="hidden input-extras">
+									</div>
+								</div>
+								<div class="box-style" onclick="cabinetsVisibility();">
+									<div id="cabinets-tooltip" data-toggle="tooltip"
+										data-placement="top" title=""
+										data-original-title="+30 minutes">
+										<div>
+											Inside<br>Cabinets
+										</div>
+										<img class="not_selected" src="img/logo/cabinet.jpg"
+											id="img-cabinets"> <i
+											class="glyphicon glyphicon-ok icon-selected"
+											id="img-cabinets-selected" style="display: none;"></i> <input
+											type="text" name="extras" id="extras-choice-6"
+											value="cabinets" label="Cabinets" class="hidden input-extras">
+									</div>
+								</div>
+								<div class="box-style" onclick="windowsVisibility();">
+									<div id="windows-tooltip" data-toggle="tooltip"
+										data-placement="top" title=""
+										data-original-title="+30 minutes">
+										<div>
+											Interior<br>Windows
+										</div>
+										<img class="not_selected" src="img/logo/window.jpg"
+											id="img-windows"> <i
+											class="glyphicon glyphicon-ok icon-selected"
+											id="img-windows-selected" style="display: none;"></i> <input
+											type="text" name="extras" id="extras-choice-2"
+											value="windows" label="Windows" class="hidden input-extras">
+									</div>
+
+								</div>
+
+								<div class="box-style" onclick="wallsVisibility();">
+									<div id="walls-tooltip" data-toggle="tooltip"
+										data-placement="top" title=""
+										data-original-title="+30 minutes">
+										<div data-original-title="" title="">
+											Interior<br>Walls
+										</div>
+										<img class="not_selected" src="img/logo/wall.jpg"
+											id="img-walls"> <i
+											class="glyphicon glyphicon-ok icon-selected"
+											id="img-walls-selected" style="display: none;"></i> <input
+											type="text" name="extras" id="extras-choice-3" value="walls"
+											label="Walls" class="hidden input-extras">
+									</div>
 								</div>
 							</div>
-							<div class="form-group alert alert-success dhj-hours-change-alert hidden">
-								<p><strong>Just a heads up! </strong>You've exceeded your pre-purchased hours. </p>
+						</section>
+						<hr>
+						<section class="selectHours">
+							<h3>Number of hours to book</h3>
+							<div class="row">
+								<div class="col-xs-8">
+									<p>
+										We recommend <strong><span id="total_hours"></span></strong>
+										hour(s) based on our experience with places like yours<span
+											id="options-details"></span>.
+									</p>
+								</div>
+								<div class="col-xs-4 select">
+									<select id="num_hours_dropdown_front" name="num_hours"
+										class="form-control input-lg num_hours_dropdown"
+										onchange="minReqHours();">
+										<option value="0">0.0</option>
+										<option value="0.5">0.5</option>
+										<option value="1" selected>1.0</option>
+										<option value="1.5">1.5</option>
+										<option value="2">2.0</option>
+										<option value="2.5">2.5</option>
+										<option value="3">3.0</option>
+										<option value="3.5">3.5</option>
+										<option value="4">4.0</option>
+										<option value="4.5">4.5</option>
+										<option value="5">5.0</option>
+										<option value="5.5">5.5</option>
+										<option value="6">6.0</option>
+										<option value="6.5">6.5</option>
+										<option value="7">7.0</option>
+										<option value="7.5">7.5</option>
+										<option value="8">8.0</option>
+										<option value="8.5">8.5</option>
+										<option value="9">9.0</option>
+										<option value="9.5">9.5</option>
+										<option value="10">10.0</option>
+										<option value="10.5">10.5</option>
+										<option value="11">11.0</option>
+										<option value="11.5">11.5</option>
+										<option value="12">12.0</option>
+										<option value="12.5">12.5</option>
+										<option value="13">13.0</option>
+										<option value="13.5">13.5</option>
+										<option value="14">14.0</option>
+										<option value="14.5">14.5</option>
+										<option value="15">15.0</option>
+										<option value="15.5">15.5</option>
+										<option value="16">16.0</option>
+									</select>
+
+								</div>
 							</div>
-						</div>
+
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="form-group customer-note-control"
+										id="customer-note-control-front" style="display: none;">
+										<hr>
+										<p class="less-hours">
+											<label style="color: #DA6565;">Because you are
+												booking less time than estimated, we may not be able to
+												clean your entire home.</label>
+										</p>
+									</div>
+									<div
+										class="form-group alert alert-success dhj-hours-change-alert hidden">
+										<p>
+											<strong>Just a heads up! </strong>You've exceeded your
+											pre-purchased hours.
+										</p>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="cleaning-supplies">
+							<form class="form-horizontal" name="cleaning_supplies">
+								<div class="form-group">
+									<div class="col-xs-4">
+										<label>Cleaning Supplies</label>
+									</div>
+									<div class="col-xs-8 inline-group">
+										<label class="radio-inline radio-button"
+											for="AddCleaningSupplies"> <input type="radio"
+											value="false" id="AddCleaningSupplies"
+											class="cleaning-supplies-radio"
+											name="cleaning-supplies-radio" checked="checked"> <i></i>
+											Cleaner will provide (<span class="supplies-fee-out">Rs.50/-</span>)
+										</label> <label class="radio-inline radio-button"
+											for="NoCleaningSupplies"> <input type="radio"
+											onclick="summonCleaningSuppliesModal();" value="true"
+											id="NoCleaningSupplies" class="cleaning-supplies-radio"
+											name="cleaning-supplies-radio"> <i></i> I will
+											provide
+										</label>
+									</div>
+								</div>
+							</form>
+						</section>
+						<section class="pets">
+							<div class="inline-group">
+								<label class="col-xs-4 control-label"
+									style="margin-left: -15px;">Do you have pets?</label>
+								<div class="col-sm-8">
+									<div>
+										<label
+											class="checkbox-inline selector show-input-section checkbox"
+											for="cats"> <input type="checkbox" id="cats"
+											name="cats" value="0"><i></i> Cats
+										</label> <label
+											class="checkbox-inline selector show-input-section checkbox"
+											for="dogs"> <input type="checkbox" id="dogs"
+											name="dogs" value="0"><i></i> Dogs
+										</label> <label
+											class="checkbox-inline selector show-input-section checkbox"
+											for="pets"> <input type="checkbox" id="pets"
+											name="pets" value="0"><i></i> Other
+										</label>
+									</div>
+									<div class="input-section"
+										style="margin-top: 15px; display: none;">
+										<input id="pet_notes" type="text" class="form-control"
+											placeholder="Describe eg. Two Large Pitbulls">
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="cleaning-supplies">
+							<form action="" class="form-horizontal" name="extra_info">
+								<div class="form-group">
+									<label for="" class="col-xs-4">Is your home carpeted?</label>
+									<div class="col-xs-8 inline-group">
+										<label class="radio-inline radio-button" for="has-carpets"><input
+											type="radio" value="false" id="has-carpets"
+											class="cleaning-supplies-radio"><i></i> Yes </label> <label
+											class="radio-inline radio-button" for="no-carpets"><input
+											type="radio" value="true" id="no-carpets"
+											class="cleaning-supplies-radio"><i></i> No</label>
+									</div>
+								</div>
+								<input type="hidden" id="book_has_carpets" value="">
+							</form>
+						</section>
+						<hr>
+						<section class="next-step">
+							<button class="btn btn-block btn-primary btn-cta skipjs"
+								onclick="showCalendarSection();">
+								Next<span class="caret right-caret"></span>
+							</button>
+							<a id="save_and_continue"></a>
+						</section>
 					</div>
 				</section>
-				<section class="cleaning-supplies">
-					<form class="form-horizontal">
-						<div class="form-group">
-							<div class="col-xs-4">
-								<label>Cleaning Supplies</label>
+
+				<!-- AVAILABLITY CALENDAR SECTION -->
+
+				<section class="form-body" id="calendar_section"
+					style="display: none;">
+					<div class="form-pane" id="calendar_section-info">
+						<section class="header-section">
+							<h1>Pick Date &amp; Time</h1>
+						</section>
+						<!-- CLEANING FREQUENCY SECTION -->
+						<section class="error-section">
+							<h4 style="color:red;display:none;" id="calendar_error">Seems like you have not entered Date or Time. Please enter values to proceed further.</h4>
+						</section>
+						<section class="frequency-section">
+							<h3 class="freq-title">How Often</h3>
+							<div
+								class="btn-group btn-group-justified btn-group-frequency text-center"
+								data-toggle="buttons">
+								<div class="btn btn-default btn-padded frequency-select-div ">
+									<input type="radio" class='frequency-select' value="onetime"
+										id="onetime">
+									<div class="hourly-price text-center" value="onetime">
+										ONE<br />TIME
+										<hr>
+										<h2>
+											<span class="frequency-rate">Rs 200/-</span>
+										</h2>
+									</div>
+								</div>
+								<div class="btn btn-default btn-padded frequency-select-div ">
+									<input type="radio" class='frequency-select' value="everyweek"
+										id="everyweek">
+									<div class="hourly-price text-center" value="everyweek">
+										EVERY<br />WEEK
+										<hr>
+										<h2>
+											<span class="frequency-rate">Rs 200/-</span>
+										</h2>
+									</div>
+								</div>
+								<div class="btn btn-default btn-padded frequency-select-div ">
+									<input type="radio" class='frequency-select'
+										value="every2weeks" id="every2weeks">
+									<div class="hourly-price text-center" value="every2weeks">
+										EVERY<br />2 WEEKS
+										<hr>
+										<h2>
+											<span class="frequency-rate">Rs 200/-</span>
+										</h2>
+									</div>
+								</div>
+								<div class="btn btn-default btn-padded frequency-select-div ">
+									<input type="radio" class='frequency-select'
+										value="every3weeks" id="every3weeks">
+									<div class="hourly-price text-center" value="every3weeks">
+										EVERY<br />3 WEEKS
+										<hr>
+										<h2>
+											<span class="frequency-rate">Rs 200/-</span>
+										</h2>
+									</div>
+								</div>
+								<div class="btn btn-default btn-padded frequency-select-div ">
+									<input type="radio" class='frequency-select'
+										value="every4weeks" id="every4weeks">
+									<div class="hourly-price text-center" value="every4weeks">
+										EVERY<br />4 WEEK
+										<hr>
+										<h2>
+											<span class="frequency-rate">Rs 200/-</span>
+										</h2>
+									</div>
+								</div>
 							</div>
-							<div class="col-xs-8 inline-group">
-								<label class="radio-inline radio-button" for="AddCleaningSupplies">
-									<input type="radio" value="false" id="AddCleaningSupplies" class="cleaning-supplies-radio" name="cleaning-supplies-radio" checked="checked">
-									<i></i> Cleaner will provide (<span class="supplies-fee-out">$5</span>)
-								</label>
-								<label class="radio-inline radio-button" for="NoCleaningSupplies">
-									<input type="radio" onclick="summonCleaningSuppliesModal();" value="true" id="NoCleaningSupplies" class="cleaning-supplies-radio" name="cleaning-supplies-radio">
-									<i></i> I will provide
-								</label>
-							</div>
-						</div>
-					</form>
+						</section>
+
+						<hr>
+						<section class="availability-section">
+							<form id="availability_info" class="form-horizontal" role="form"
+								target="submit-frame" name="date_time">
+								<div class="form-group">
+									<label for="dtp_input2" class="col-md-2 control-label"><h4>Pick
+											a Day</h4></label>
+									<div class="input-group date form_date col-md-10" data-date="">
+										<span class="input-group-addon"
+											style="background-color: #00C957;"><span
+											class="glyphicon glyphicon-calendar" style="color: #fff;"></span></span>
+										<input id="date" class="form-control input-lg" size="16" type="text"
+											value="" readonly>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="dtp_input" class="col-md-2 control-label"><h4>Pick
+											Time</h4></label>
+									<div class="input-group form_time col-md-10">
+										<span class="input-group-addon"
+											style="background-color: #00C957;"><span
+											class="glyphicon glyphicon-time" style="color: #fff;"></span></span>
+										<input id="time" class="form-control input-lg" type="text" value=""
+											readonly>
+									</div>								
+								</div>
+							</form>
+						</section>
+						<hr>
+						<!-- NEXT STEP SECTION -->
+						<section class="next-step">
+							<button class="skipjs btn btn-block btn-primary btn-cta"
+								onclick="showContactDetails();">
+								Next<span class="caret right-caret"></span>
+							</button>
+						</section>
+					</div>
 				</section>
-				<section class="pets">
-					 <div class="inline-group">
-						 <label class="col-xs-4 control-label" style="margin-left:-15px;">Do you have pets?</label>
-						 <div class="col-sm-8">
-							 <div>
-								 <label class="checkbox-inline selector show-input-section checkbox" for="cats">
-									 <input type="checkbox" id="cats" name="cats" value="0"><i></i>
-									 Cats
-								 </label>
-								 <label class="checkbox-inline selector show-input-section checkbox" for="dogs">
-									 <input type="checkbox" id="dogs" name="dogs" value="0"><i></i>
-									 Dogs
-								 </label>
-								 <label class="checkbox-inline selector show-input-section checkbox" for="pets">
-									 <input type="checkbox" id="pets" name="pets" value="0"><i></i>
-									 Other
-								 </label>
-							 </div>
-							 <div class="input-section" style="margin-top: 15px; display: none;">
-								 <input id="pet_notes" type="text" class="form-control" placeholder="Describe eg. Two Large Pitbulls">
-							 </div>
-						 </div>
-					 </div>
-				 </section>
-				 <section class="cleaning-supplies">
-					<form action="" class="form-horizontal">
-						<div class="form-group">
-							<label for="" class="col-xs-4">Is your home carpeted?</label>
-							<div class="col-xs-8 inline-group">
-								<label class="radio-inline radio-button" for="has-carpets"><input type="radio" value="false" id="has-carpets" class="cleaning-supplies-radio"><i></i> Yes </label>
-								<label class="radio-inline radio-button" for="no-carpets"><input type="radio" value="true" id="no-carpets" class="cleaning-supplies-radio"><i></i> No</label>
-							</div>
-						</div>
-						<input type="hidden" id="book_has_carpets" value="">
-					</form>
-				</section>
-				<hr>
-				<section class="next-step">
-					<button class="btn btn-block btn-primary btn-cta skipjs" onclick="showCalendarSection();">Next<span class="caret right-caret"></span></button>
-					<a id="save_and_continue"></a>
-				</section>
-				</div>
-			</section>
-		
-	<!-- AVAILABLITY CALENDAR SECTION -->
-	
-<section class="form-body" id="calendar_section" style="display: none;">
-	<div class="form-pane" id="calendar_section-info">
-		<section class="header-section">
-			<h1>Pick Date &amp; Time</h1>
-		</section>
-		<!-- CLEANING FREQUENCY SECTION -->
-
-		<section class="frequency-section">
-			<h3 class="freq-title">How Often</h3>
-			<div class="btn-group btn-group-justified btn-group-frequency text-center" data-toggle="buttons">
-				<div class="btn btn-default btn-padded frequency-select-div ">
-					<input type="radio" class='frequency-select' value="onetime" id="onetime">
-					<div class="hourly-price text-center" value="onetime">
-						ONE<br/>TIME
-						<hr>
-						<h2><span class="frequency-rate">Rs 200/-</span></h2>
-					</div>
-				</div>
-				<div class="btn btn-default btn-padded frequency-select-div ">
-					<input type="radio" class='frequency-select' value="everyweek" id="everyweek">
-					<div class="hourly-price text-center" value="everyweek">
-						EVERY<br/>WEEK
-						<hr>
-						<h2><span class="frequency-rate">Rs 200/-</span></h2>
-					</div>
-				</div>
-				<div class="btn btn-default btn-padded frequency-select-div ">
-					<input type="radio" class='frequency-select' value="every2weeks" id="every2weeks">
-					<div class="hourly-price text-center" value="every2weeks">
-						EVERY<br/>2 WEEKS
-						<hr>
-						<h2><span class="frequency-rate">Rs 200/-</span></h2>
-					</div>
-				</div>
-				<div class="btn btn-default btn-padded frequency-select-div ">
-					<input type="radio" class='frequency-select' value="every3weeks" id="every3weeks">
-					<div class="hourly-price text-center" value="every3weeks">
-						EVERY<br/>3 WEEKS
-						<hr>
-						<h2><span class="frequency-rate">Rs 200/-</span></h2>
-					</div>
-				</div>
-				<div class="btn btn-default btn-padded frequency-select-div ">
-					<input type="radio" class='frequency-select' value="every4weeks" id="every4weeks">
-					<div class="hourly-price text-center" value="every4weeks">
-						EVERY<br/>4 WEEK
-						<hr>
-						<h2><span class="frequency-rate">Rs 200/-</span></h2>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<hr>
-		<section class="availability-section">
-			<form id="availability_info" class="form-horizontal" role="form" target="submit-frame">
-				<div class="form-group">
-					<label for="dtp_input2" class="col-md-2 control-label"><h4>Pick a Day</h4></label>
-					<div class="input-group date form_date col-md-10" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-						<span class="input-group-addon" style="background-color:#00C957;"><span class="glyphicon glyphicon-calendar" style="color:#fff;"></span></span>
-						<input class="form-control input-lg" size="16" type="text" value="" readonly>
-					</div>
-					<input type="hidden" id="dtp_input2" value="" /><br/>
-				</div>
-		
-				<div class="form-group">
-					<label for="dtp_input" class="col-md-2 control-label"><h4>Pick Time</h4></label>
-					<div class="input-group form_time col-md-10">
-						<span class="input-group-addon" style="background-color:#00C957;"><span class="glyphicon glyphicon-time" style="color:#fff;"></span></span>
-						<input class="form-control input-lg" type="text" value="" readonly>
-					</div>
-					<input type="hidden" id="dtp_input" value="" /><br/>
-				</div>
-			</form>
-		</section>
-		<hr>
-
-
-		<!-- NEXT STEP SECTION -->
-
-		<section class="next-step">
-			<button class="skipjs btn btn-block btn-primary btn-cta" onclick="showContactDetails();">Next<span class="caret right-caret"></span></button>
-		</section>
-	</div>
-</section>
-<!-- Contact-Info Pane starts -->
-			
-	<section class="form-body" id="contact_details" style="display: none;">
-		<div class="form-pane" id="contact-info">
-			<section class="header-section">
-				<h1>Enter Contact Info</h1>
-			</section>
 				
-			<!-- ADDRESS SECTION -->
- 
-			<section class="address-section">
-				<form class="form-horizontal" role="form" id="address-form" target="submit-frame" method="POST">
-					<div class="form-group">
-						<label for="address_street1" class="control-label" style="padding-left:20px;">Cleaning Address</label>
-					</div>
+				<!-- Contact-Info Pane starts -->
 
-					<div class="form-group">
-						<div class="col-xs-12">
-							<input id="address_street1" name="address_street1" type="text" class="form-control input-lg" placeholder="Address Line 1" minlength="1" required="true">
+				<section class="form-body" id="contact_details"
+					style="display: none;">
+					<div class="form-pane" id="contact-info">
+						<section class="header-section">
+							<h1>Enter Contact Info</h1>
+						</section>
+
+						<!-- ADDRESS SECTION -->
+
+						<section class="address-section">
+							<form class="form-horizontal" role="form" id="address-form"
+								target="submit-frame" method="POST" name="address-info">
+								<div class="form-group">
+									<label for="address_street1" class="control-label"
+										style="padding-left: 20px;">Cleaning Address</label>
+								</div>
+
+								<div class="form-group">
+									<div class="col-xs-12">
+										<input id="address_street1" name="address_street1" type="text"
+											class="form-control input-lg" placeholder="Address Line 1"
+											minlength="1" required="true" aria-required="true">
+										<label id="address_street1-error" class="error" for="address_street1"></label>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<div class="col-xs-12">
+										<input id="address_street2" name="address_street2" type="text"
+											class="form-control input-lg" placeholder="Address Line 2">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<div class="col-xs-6">
+										<input id="city" name="city" type="text"
+											class="form-control input-lg" placeholder="City"
+											minlength="3" required="true" aria-required="true">
+										<label id="city-error" class="error" for="city"></label>
+									</div>
+
+									<div class="col-xs-2" style="padding-left: 0px;">
+										<input id="state" name="state" type="text"
+											class="form-control input-lg" placeholder="State"
+											minlength="2" required="true">
+										<label id="state-error" class="error" for="state"></label>
+									</div>
+
+									<div class="col-xs-4" style="padding-left: 0px;">
+										<input id="zipcode" name="zipcode" type="text"
+											class="form-control input-lg" placeholder="Zipcode"
+											minlength="1" required="true">
+										<label id="zipcode-error" class="error" for="zipcode"></label>
+									</div>
+								</div>
+								<input type="submit" value="submit" class="hidden" />
+							</form>
+						</section>
+						<hr>
+
+						<!-- CONTACT INFORMATION SECTION -->
+						<section class="contact-section">
+							<p class="text-center">This information will only be used to
+								contact you about your cleaning</p>
+							<form id="contact_info" class="form-horizontal" role="form"
+								target="submit-frame" method="POST" name="contact-info">
+								<div class="form-group">
+									<label for="name-input" class="col-lg-2 control-label">Name</label>
+									<div class="col-lg-10">
+										<input type="text" class="form-control input-lg" id="name"
+											name="customer_name" placeholder="Full Name" required
+											data-validation-required-message="Please enter your name.">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="email-input" class="col-lg-2 control-label">Email</label>
+									<div class="col-lg-10">
+										<input type="email" class="form-control input-lg" id="email"
+											name="customer_email" placeholder="Email Address" required
+											data-validation-required-message="Please enter your email address.">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="password-input" class="col-lg-2 control-label">Password</label>
+									<div class="col-xs-5">
+										<input type="password" class="form-control input-lg"
+											id="password" name="customer_password"
+											placeholder="Create Password">
+									</div>
+									<div class="col-xs-5">
+										<input type="password" class="form-control input-lg"
+											id="confirm_password" name="customer_confirm_password"
+											placeholder="Confirm Password">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="phone-input" class="col-lg-2 control-label">Phone</label>
+									<div class="col-lg-10">
+										<input type="text" class="form-control input-lg" id="phone"
+											name="customer_phone" placeholder="Phone Number">
+										<p class="help-block text-danger"></p>
+										<label for="customer_phone" class="error"></label>
+									</div>
+								</div>
+								<input type="submit" value="submit" class="hidden" />
+							</form>
+						</section>
+
+						<!-- NEXT STEP SECTION -->
+						<hr>
+						<section class="next-step">
+							<button id="submit"
+								class="skipjs btn btn-block btn-primary btn-cta"
+								onclick="showSummary();">
+								Submit<span class="caret right-caret"></span>
+							</button>
+						</section>
+					</div>
+				</section>
+
+				<!-- SUMMARY PANE STARTS-->
+				<section class="form-body" id="end_section" style="display: none;">
+					<div class="form-pane" id="summary_info">
+						<section class="header-section">
+							<h1>Thankyou for contacting us. Enjoy our services now.</h1>
+						</section>
+						<div class="row">
+								<div class="col-md-7">
+									<div class="panels">
+										<div class="panel panel-success">
+											<div class="panel-heading clearfix">
+												<h3 class="pull-left">Review Order</h3>
+											</div>
+											<div class="panel-body">
+												<table class="table table-hover table-bordered">
+													<tbody>
+														<tr>
+															<td>Address:</td>
+															<td><span id="display_address"></span></td>
+														</tr>
+														<tr>
+															<td>City:</td>
+															<td><span id="display_city"></span></td>
+														</tr>
+														<tr>
+															<td>Name:</td>
+															<td><span id="display_name"></span></td>
+														</tr>
+														<tr>
+															<td>Phone:</td>
+															<td><span id="display_phone"></span></td>
+														</tr>
+														<tr>
+															<td>Email:</td>
+															<td><span id="display_email"></span></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-5">
+								<section  style="border:2px solid #a8a8a8; margin-top:0px;">
+								<h3 class="text-center">Date & Time Info</h3>
+									<table class="table table-condensed">
+										<tbody>
+											<tr>
+												<td>Cleaning Date</td>
+												<td><span id="cleaning_date"></span></td>
+											</tr>
+											<tr>
+												<td>Cleaning Time</td>
+												<td><span id="cleaning_time"></span></td>
+											</tr>
+										</tbody>
+									</table>
+								</section>
+								</div>
+								
 						</div>
 					</div>
-
-					<div class="form-group">
-						<div class="col-xs-12">
-							<input id="address_street2" name="address_street2" type="text" class="form-control input-lg" placeholder="Address Line 2">
-						</div>
+				</section>
+			</div>
+			<!-- CONTAINER ENDING -->
+			<div class="col-xs-3" id="summary_Section">
+				<section id="summary-box">
+					<h3 class="text-center">Summary</h3>
+					<div id="summary-details">
+						<table class='table borderless table-condensed'>
+							<tr>
+								<td><span id="no_bedroom"></span></td>
+								<td><span id="bedroom_hours"></span></td>
+							</tr>
+							<tr>
+								<td><span id="no_bathroom"></span></td>
+								<td><span id="bathroom_hours"></span></td>
+							</tr>
+							<tr>
+								<td>Extra Work</td>
+								<td><span id="extra_work_hours"></span></td>
+							</tr>
+							<tr>
+								<td>Total Hours</td>
+								<td><span id="total_hours_summary"></span></td>
+							</tr>
+							<tr style="border-top: 1px solid #a8a8a8">
+								<td><b>Total Amount</b></td>
+								<td><span id="total_ruppee_summary"></span></td>
+							</tr>
+						</table>
 					</div>
-
-					<div class="form-group">
-						<div class="col-xs-6">
-							<input id="city" name="city" type="text" class="form-control input-lg" placeholder="City" minlength="3">
-						</div>
-
-						<div class="col-xs-2" style="padding-left:0px;">
-							<input id="state" name="state" type="text" class="form-control input-lg" placeholder="State" minlength="2" required="true">
-						</div>
-
-						<div class="col-xs-4" style="padding-left:0px;">
-							<input id="zipcode" name="zipcode" type="text" class="form-control input-lg" placeholder="Zipcode" minlength="1" required="true">
-						</div>
-					</div>
-					<input type="submit" value="submit" class="hidden"/>
-				</form>
-			</section>
-			<hr>
-
-<!-- CONTACT INFORMATION SECTION -->
-			<section class="contact-section">
-
-				<p class="text-center">This information will only be used to contact you about your cleaning</p>
-				<form id="contact_info" class="form-horizontal" role="form" target="submit-frame" method="POST">
-					<div class="form-group">
-						<label for="name-input" class="col-lg-2 control-label">Name</label>
-						<div class="col-lg-10"><input type="text" class="form-control input-lg" id="name" name="customer_name" placeholder="Full Name" required data-validation-required-message="Please enter your name."></div>
-					</div>
-					<div class="form-group">
-						<label for="email-input" class="col-lg-2 control-label">Email</label>
-						<div class="col-lg-10"><input type="email" class="form-control input-lg" id="email" name="customer_email" placeholder="Email Address" required data-validation-required-message="Please enter your email address."></div>
-					</div>
-					
-					<div class="form-group">
-						<label for="password-input" class="col-lg-2 control-label">Password</label>
-						<div class="col-xs-5"><input type="password" class="form-control input-lg" id="password" name="customer_password" placeholder="Create Password">
-						</div>
-						<div class="col-xs-5"><input type="password" class="form-control input-lg" id="confirm_password" name="customer_confirm_password" placeholder="Confirm Password">
-						</div>
-					</div>
-					
-					<div class="form-group">
-						<label for="phone-input" class="col-lg-2 control-label">Phone</label>
-						<div class="col-lg-10">
-							<input type="text" class="form-control input-lg" id="phone" name="customer_phone" placeholder="Phone Number" required data-validation-required-message="Please enter your phone number.">
-							<p class="help-block text-danger"></p>
-							<label for="customer_phone" class="error"></label>
-						</div>
-					</div>
-					<input type="submit" value="submit" class="hidden"/>
-					 <!--<div class="row">
-                            <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-lg" style="background-color:#00688B;color:white;border:solid 1px white;">Send</button>
-                            </div>
-                        </div>-->
-				</form>
-			</section>
-
-<!-- NEXT STEP SECTION -->
-    <hr>
-    <section class="next-step">
-        <button id="submit" class="skipjs btn btn-block btn-primary btn-cta">Next<span class="caret right-caret"></span></button>
-    </section>
+				</section>
+			</div>
+		</div>
 	</div>
-</section>
 
-<!-- CONTAINER ENDING -->
-	</div>
-	</div>
 
-<!-- jQuery Version 1.8.3 -->
-<script src="js/jquery-1.8.3.min.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-<script type="text/javascript" src="js/bootstrap-datetimepicker.uk.js" charset="UTF-8"></script>
-<script type="text/javascript" src="js/clockpicker.js" charset="UTF-8"></script>
-<!-- Plugin JavaScript -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+	<!-- jQuery Version 1.8.3 -->
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="js/bootstrap-datetimepicker.uk.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="js/clockpicker.js" charset="UTF-8"></script>
+	<!-- Plugin JavaScript -->
 <script src="js/classie.js"></script>
-<script src="js/cbpAnimatedHeader.js"></script>
+	<script src="js/cbpAnimatedHeader.js"></script>
+<script src="https://fuelcdn.com/fuelux/2.3/loader.min.js"></script>
+	<!-- Contact Form JavaScript -->
+	<script src="js/jqBootstrapValidation.js"></script>
+	<script src="js/validation.js"></script>
+	<script src="js/contact_me.js"></script>
+	<script src="js/booking_hours.js"></script>
 
-<!-- Contact Form JavaScript -->
-<script src="js/jqBootstrapValidation.js"></script>
-<script src="js/contact_me.js"></script>
-<script src="js/booking_hours.js"></script>
+	<script type="text/javascript">
+		$('.form_date').datetimepicker({
+			format : "dd MM yyyy",
+			weekStart : 1,
+			todayBtn : 1,
+			autoclose : 1,
+			todayHighlight : 1,
+			startView : 2,
+			minView : 2,
+			forceParse : 0,
+			orientation : "auto"
+		});
+		$('.form_time').clockpicker({
+			autoclose : true,
+			'default' : 'now',
+			donetext : 'Done',
+			vibrate : true
+		});
 
-<script type="text/javascript">
-	$('.form_date').datetimepicker({
-		format: "dd MM yyyy",
-        weekStart: 1,
-        todayBtn:  1,
-		autoclose: 1,
-		todayHighlight: 1,
-		startView: 2,
-		minView: 2,
-		forceParse: 0,
-		orientation: "auto"
-    });
-	$('.form_time').clockpicker({
-		autoclose: true,
-		'default': 'now',
-		donetext: 'Done',
-		vibrate: true 
-	});
-	
-	$('#laundry-tooltip').tooltip();
-	$('#fridge-tooltip').tooltip();
-	$('#oven-tooltip').tooltip();
-	$('#cabinets-tooltip').tooltip();
-	$('#windows-tooltip').tooltip();
-	$('#walls-tooltip').tooltip();
-</script>
+		$('#laundry-tooltip').tooltip();
+		$('#fridge-tooltip').tooltip();
+		$('#oven-tooltip').tooltip();
+		$('#cabinets-tooltip').tooltip();
+		$('#windows-tooltip').tooltip();
+		$('#walls-tooltip').tooltip();
+		
+		/* DATE VALIDATION */
+		$('#availability_info').bootstrapValidator({
+            date: {
+                validators: {
+                    notEmpty: {
+                        message: 'The date is required'
+                    }
+                }
+            }
+        });
+		
+		/* ADDRESS FORM VALIDATION */
+		$('#contact_info').validate({
+                rules: {
+                    customer_name: {
+                        required: true,
+                    },
+					customer_email: {
+                        required: true,
+                        email:true
+                    },
+                    customer_phone: {
+                        required: true
+                    },
+                    customer_password: {
+                        required: true,
+                        minlength: 6
+                    },
+                    customer_confirm_password: {
+                        required: true,
+                        equalTo: "#customer_password"
+                    },
+                },
+                messages: {
+                    customer_name: {
+                        required: "Please enter your name"
+                    },
 
+                    customer_email: {
+                        required: "Please enter a valid email address",
+                        email: "Please enter a valid email address"
+                    },
+                    customer_phone: {
+                        required: "Please enter a valid phone number"
+                    },
+                    
+                    customer_password: {
+                        required: "Please create a password.",
+                        minlength: "Password must be more than 6 characters."
+                    },
+                    customer_confirm_password: {
+                        required: "Please confirm your password.",
+                        equalTo: "Passwords do not match.",
+                    }
+                    
+                }
+            });
+
+		
+	</script> 
 </body>
-
 </html>

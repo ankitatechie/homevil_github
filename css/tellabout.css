@@ -28,6 +28,9 @@ header .progress-bar-section li.access-approved {
 opacity: 1;
 cursor: pointer;
 }
+.progress-bar-section [data-step].access-approved {
+cursor: pointer;
+}
 header .progress-bar-section li {
 margin-right: 27px;
 font-size: 10px;
@@ -355,6 +358,12 @@ width: 500px;
 background-color: #00C957;
 color: #fff;
 }
+[class*=" datetimepicker-dropdown"]:before{
+border-bottom: 7px solid #00C957;
+}
+.datetimepicker table tr td.active.active{
+background-color: #00C957;
+}
 .text-primary {
 color: #00C957;
 }
@@ -392,4 +401,48 @@ font-size: 14px;
 }
 .btn-default {
 border: 1.5px solid #00C957;
+}
+#summary_Section{
+padding-top:5px;
+border:2px solid #a8a8a8;
+margin-top:100px;
+background-color:#fbfbf9;
+}
+.summary-details h4{
+font-weight:400px;
+}
+#total_ruppees{
+padding-left: 100px;
+}
+#summary_Section table td {
+    border-top: none;
+}
+#end_section table td{
+width: 120px;
+}
+#end_section table td:last-child{
+width: 350px;
+}
+.panels{
+border:2px solid #a8a8a8;
+}
+.panel {
+margin-bottom: 0px;
+}
+.panel-heading {
+padding-left:10px;
+}
+.panel-heading h3 {
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.panel-body {
+padding: 0;
+margin-right: -3px;
+}
+.panel table td:last-child {
+text-align: right;
+}
+#end_section .table {
+margin: -1px;
 }
